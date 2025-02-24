@@ -1,0 +1,23 @@
+.search-bar {
+    display: flex;
+    background-color: $white;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid $grey-light;
+    padding: 16px;
+    border-radius: 8px;
+    width: 287px;
+    
+    input {
+      border: none;
+      outline: none;
+      flex: 1;
+      color: $black;
+      font-size: 16px;
+    }
+  
+    .icon {
+      cursor: pointer;
+    }
+  }
+  
