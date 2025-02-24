@@ -15,6 +15,7 @@ export default function Home() {
               <h1>Funcionários</h1>
               <SearchBar onSearch={setSearchQuery} />
             </div>
+            <EmployeeTable searchQuery={searchQuery} />
         </div>
       </main>
     </>
