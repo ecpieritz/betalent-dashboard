@@ -4,10 +4,12 @@ import EmployeeTable from '../components/EmployeeTable';
 
 const HomePage = () => {
     return (
-        <div className="App">
+        <div className="home">
             <Header />
-            <SearchBar />
-            <EmployeeTable />
+            <div className="container">
+                <SearchBar />
+                <EmployeeTable />
+            </div>
         </div>
     );
 }
