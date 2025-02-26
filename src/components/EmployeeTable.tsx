@@ -1,28 +1,11 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-
-type Employee = {
-  id: number;
-  name: string;
-  job: string;
-  admission_date: string;
-  phone: string;
-  image: string;
-};
+import { Employee } from "../types/Employee"; 
 
 type EmployeeTableProps = {
   searchQuery: string;
+  employees: Employee[];
 };
 
-export default function EmployeeTable({ searchQuery }: EmployeeTableProps) {
-  const [employees, setEmployees] = useState<Employee[]>([]);
-
-  useEffect(() => {
-    axios.get("http://localhost:5000/employees").then((response) => {
-      setEmployees(response.data);
-    });
-  }, []);
-
+export default function EmployeeTable({ searchQuery, employees }: EmployeeTableProps) {
   const filteredEmployees = employees.filter((employee) =>
     Object.values(employee).some((value) =>
       value.toString().toLowerCase().includes(searchQuery.toLowerCase())
