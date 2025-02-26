@@ -1,0 +1,73 @@
+.employeeTableMobile {
+  padding: 24px 20px;
+
+  .accordion-titles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-color;
+    color: $white;
+    padding: 16px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    &__text {
+      display: flex;
+      flex-direction: row;
+
+      #photo {
+        margin-right: 15px;
+      }
+    }
+
+    &__dot {
+      width: 8px;
+      height: 8px;
+      margin-right: 10px;
+    }
+  }
+
+  .accordion {
+    border: 1px solid $grey-light;
+    padding: 10px;
+    background-color: $white;
+  
+    &__button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+      background-color: $white;
+      border: none;
+      cursor: pointer;
+      justify-content: space-between;
+      font-size: 16px;
+  
+      &__image {
+        width: 34px;
+        border-radius: 50%;
+        margin-right: 24px;
+      }
+    }
+  
+    &__button__icon {
+      margin-left: auto;
+      width: 20px;
+    }
+  
+    &__content {
+      padding: 16px 10px;
+      font-size: 16px;
+
+      &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        border-bottom: 1px dotted $grey-light;
+      }
+    }
+  }
+}
